@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumDriver;
 
-public class CellST {
+public class MobileSmokeTest {
 	AppiumDriver<WebElement> driver;
 
 	String log4jConfPath = "E:\\workspace\\MavenTest\\src\\src\\log4j.properties";
@@ -203,3 +203,4 @@ System.out.println("Starting JUNIT test case");
 	}
 
 }
+

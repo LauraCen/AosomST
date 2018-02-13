@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: AosomST.MobileSmokeTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.081 s <<< FAILURE! - in AosomST.MobileSmokeTest
+test(AosomST.MobileSmokeTest)  Time elapsed: 1.895 s  <<< ERROR!
+java.lang.NullPointerException
+	at AosomST.MobileSmokeTest.setUp(MobileSmokeTest.java:49)
+
+test(AosomST.MobileSmokeTest)  Time elapsed: 1.896 s  <<< ERROR!
+java.lang.NullPointerException
+	at AosomST.MobileSmokeTest.tearDown(MobileSmokeTest.java:60)
+
