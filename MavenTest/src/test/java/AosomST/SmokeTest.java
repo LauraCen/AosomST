@@ -36,6 +36,12 @@ public class SmokeTest extends TestCase {
 	
 	private static String watchedLog ="";
 	
+	public SmokeTest(String name){
+		
+		super(name);
+	}
+	
+	
 	@Rule
 	public TestWatcher watchman = new TestWatcher(){
 		
