@@ -398,7 +398,7 @@ public final class GeneralOper {
       //open product description page and review information on page
       driver.findElement(By.xpath("//*[@id='divforcomparing1']/div[1]/a/img")).click();;
       
-      new WebDriverWait(driver,9000).until(webDriver->((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete"));
+     // new WebDriverWait(driver,9000).until(webDriver->((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete"));
 		
       //scroll down page to down review detail information on page and add product from recommended area
       int i =0;

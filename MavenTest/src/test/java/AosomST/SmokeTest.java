@@ -139,7 +139,7 @@ public class SmokeTest extends TestCase {
 		this.wb.get(url);
 		log.debug("Start browser to website" +url);
 		
-		new WebDriverWait(this.wb,pageLoadTimeout).until(webDriver->((JavascriptExecutor)this.wb).executeScript("return document.readyState").equals("complete"));
+		//new WebDriverWait(this.wb,pageLoadTimeout).until(webDriver->((JavascriptExecutor)this.wb).executeScript("return document.readyState").equals("complete"));
 				
 		this.wb.manage().window().maximize();
 		log.debug("Maximize browser window");
