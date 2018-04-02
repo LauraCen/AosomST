@@ -23,8 +23,6 @@ public class MobileSmokeTest {
 	
 	Logger log = Logger.getLogger("MobileSmokeTestclass");
 	
-	takeScreenShot tk = new takeScreenShot();
-
 	@Before
 	public void setUp() throws Exception {
 		
@@ -108,7 +106,7 @@ System.out.println("Starting JUNIT test case");
 			e.printStackTrace();
 		}
 		
-		tk.takeScreenShot(driver);
+		takeScreenShot.takeScreenShot(driver);
 		
 		//add to cart
 		this.driver.findElement(By.xpath("//*[@id='divforcomparing0']/div[2]/div[3]//*[@title='Add to Cart']")).click();
@@ -121,7 +119,7 @@ System.out.println("Starting JUNIT test case");
 			e.printStackTrace();
 		}
 		
-		tk.takeScreenShot(driver);
+		takeScreenShot.takeScreenShot(driver);
 		
 		//proceed to checkout
 			this.driver.findElement(By.xpath("//*[@title='Proceed to Checkout']")).click();
@@ -198,7 +196,7 @@ System.out.println("Starting JUNIT test case");
 	    	
 	    }
 	    System.out.println("taking screenshot");
-	    tk.takeScreenShot(driver);
+	    takeScreenShot.takeScreenShot(driver);
 	
 	}
 
