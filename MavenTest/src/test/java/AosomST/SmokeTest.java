@@ -17,6 +17,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
 
+import junit.framework.TestCase;
+
 import org.junit.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +27,7 @@ import org.apache.log4j.*;
 
 
 
-public class SmokeTest {
+public class SmokeTest extends TestCase {
 	WebDriver wb;
 	
 	String log4jConfPath = "E:\\workspace\\AosomChrome\\src\\log4j.properties";
@@ -97,131 +99,6 @@ public class SmokeTest {
 		this.wb.quit();
 	}
 
-	@Test
-	public void testUK(){
-			
-		    
-		   // BasicConfigurator.configure();
-		
-			String url ="https://www.aosom.co.uk";
-			//String productUrl = "https://www.aosom.co.uk/toys-games/homcom-kids-electric-ride-on-cars-sports-car-w-music-6v-remote-control-white.html";
-			String productName ="sport";
-			
-			String BillingFirstName ="Laura";
-			String BillingLastName ="Cen";
-			String BillingEmailAddr = "shenzhe1642_cn@163.com";
-			String BillingAddr ="testForLaura";
-			String BillingCity ="London";
-			String BillingZip ="UB6 7RH";
-			String BillingTelephone = "08002404004";
-					
-			
-			this.wb.get(url);
-			log.debug("Start browser to website" +url);
-			
-			this.wb.manage().window().maximize();
-			log.debug("Maximize browser window");
-					
-			//search product
-			WebElement searchEle= this.wb.findElement(By.name("q"));
-			log.debug("clicking on Search button");
-			searchEle.sendKeys(productName);
-			searchEle.submit();
-					
-			//add to cart
-			this.wb.findElement(By.xpath("//*[@id='divforcomparing0']/div[2]//*[@type='button']")).click();
-			log.debug("clicking on first product from searching result webpage");
-			
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		    //switch to shopping cart window
-			this.wb.findElement(By.xpath("//div[@class='alertcontent']//a[contains(@class,'cart')]")).click();
-			log.debug("clicking on Add to cart button");
-			
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			//save screenshot for shopping cart
-			takeScreenShot.takeScreenShot(this.wb);
-			
-			//switch to checkout page
-			WebElement chkOutEle = this.wb.findElement(By.xpath("//*[@id='ajax-cart']/div[1]/div[1]/ul/li[3]/*[@type='button']"));
-			chkOutEle.click();
-			log.debug("click on Show cart button on adding successful ajax window");
-			
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			
-			//filling bill information
-			WebElement billFirstName = this.wb.findElement(By.xpath("//input[@id='billing:firstname']"));
-			billFirstName.sendKeys(BillingFirstName);
-		    this.wb.findElement(By.xpath("//input[@id='billing:telephone']")).sendKeys(BillingTelephone);
-		    this.wb.findElement(By.xpath("//input[@id='billing:postcode']")).sendKeys(BillingZip);
-		    this.wb.findElement(By.xpath("//input[@id='billing:city']")).sendKeys(BillingCity);
-		    this.wb.findElement(By.xpath("//input[@id='billing:street1']")).sendKeys(BillingAddr);
-		    this.wb.findElement(By.xpath("//input[@id='billing:lastname']")).sendKeys(BillingLastName);
-		    this.wb.findElement(By.xpath("//input[@id='billing:email']")).sendKeys(BillingEmailAddr);
-		   
-		    
-		    log.debug("Filling information for buyer");
-		    
-		    try {
-				Thread.sleep(20000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    
-		    //select payment for PayPalCheckout
-		    WebElement PaypalRadioBtn =this.wb.findElement(By.xpath("//input[@id='p_method_paypal_express']"));  
-		    PaypalRadioBtn.click();
-		    log.debug("Selected on radio button of Payment method");
-		    
-		    try {
-				Thread.sleep(20000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    
-		    
-		    //submit checkout review
-		    log.debug("clicking on Place Order button");
-		    WebElement plcOrdBtn= this.wb.findElement(By.xpath("//*[@id='checkout-review-submit']//*[@type='button']"));
-		    plcOrdBtn.click();
-		    
-		    WebDriverWait wait = new WebDriverWait(this.wb,60000); 
-		    log.debug("Switching to paypal webpage");
-		    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='paypalLogo']")));
-		  		
-		    try {
-				Thread.sleep(30000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		    //save screenshot for Paypal
-		    takeScreenShot.takeScreenShot(this.wb);
-			   
-		    //assertTrue(this.wb.getCurrentUrl()==productUrl);
-		}
-	
-	
 	@Test
 	public void CA_Login_PayPal (){
 		
