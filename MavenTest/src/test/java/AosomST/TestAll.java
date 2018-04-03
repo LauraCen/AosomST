@@ -10,7 +10,7 @@ public class TestAll {
 		
 		//suite.addTestSuite(SmokeTest.class);
 		
-		suite.addTest(new SmokeTest("CA_Login_PayPal"));
+		suite.addTest(new SmokeTest("testCALoginPayPal"));
 		
 		return suite;
 	}
