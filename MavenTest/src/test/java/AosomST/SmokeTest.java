@@ -18,6 +18,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
 
 import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 import org.junit.*;
 import java.util.*;
@@ -104,9 +105,11 @@ public class SmokeTest extends TestCase {
 	public void tearDown() throws Exception {
 		this.wb.quit();
 	}
+    
 
+	
 	@Test
-	public void CA_Login_PayPal (){
+	public void testCALoginPayPal (){
 		
 		//PropertyConfigurator.configure(log4jConfPath);
 		long pageLoadTimeout = 9000 ;
