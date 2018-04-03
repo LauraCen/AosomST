@@ -1,7 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: AosomST.TestAll
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.765 s <<< FAILURE! - in AosomST.TestAll
-CA_Login_PayPal(AosomST.SmokeTest)  Time elapsed: 2.765 s  <<< FAILURE!
-junit.framework.AssertionFailedError: Method "CA_Login_PayPal" not found
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 44.866 s <<< FAILURE! - in AosomST.TestAll
+testCALoginPayPal(AosomST.SmokeTest)  Time elapsed: 44.866 s  <<< FAILURE!
+java.lang.AssertionError: --User is not logged in, please check it again!
+	at AosomST.SmokeTest.testCALoginPayPal(SmokeTest.java:159)
 
