@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: AosomST.TestAll
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.891 s <<< FAILURE! - in AosomST.TestAll
-CA_Login_PayPal(AosomST.SmokeTest)  Time elapsed: 2.891 s  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.56 s <<< FAILURE! - in AosomST.TestAll
+CA_Login_PayPal(AosomST.SmokeTest)  Time elapsed: 2.56 s  <<< FAILURE!
 junit.framework.AssertionFailedError: Method "CA_Login_PayPal" not found
 
