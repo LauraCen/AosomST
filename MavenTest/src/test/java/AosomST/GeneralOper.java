@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 
-public final class GeneralOper {
+public class GeneralOper {
 	
 		
 	String log4jConfPath = "E:\\workspace\\AosomChrome\\src\\log4j.properties";
