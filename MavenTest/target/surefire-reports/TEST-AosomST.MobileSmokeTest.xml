@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="AosomST.MobileSmokeTest" time="1.882" tests="2" errors="2" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="AosomST.MobileSmokeTest" time="2.249" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="JOB_NAME" value="Test"/>
@@ -133,7 +133,7 @@
     <property name="PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules"/>
     <property name="GIT_URL" value="https://github.com/LauraCen/AosomST.git"/>
   </properties>
-  <testcase name="test" classname="AosomST.MobileSmokeTest" time="1.797">
+  <testcase name="test" classname="AosomST.MobileSmokeTest" time="2.098">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at AosomST.MobileSmokeTest.setUp(MobileSmokeTest.java:47)
 </error>
@@ -147,7 +147,7 @@ log4j:WARN Please initialize the log4j system properly.
 log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
 ]]></system-err>
   </testcase>
-  <testcase name="test" classname="AosomST.MobileSmokeTest" time="1.801">
+  <testcase name="test" classname="AosomST.MobileSmokeTest" time="2.098">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at AosomST.MobileSmokeTest.tearDown(MobileSmokeTest.java:58)
 </error>

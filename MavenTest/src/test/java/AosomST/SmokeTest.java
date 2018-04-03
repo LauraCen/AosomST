@@ -140,7 +140,7 @@ public class SmokeTest extends TestCase {
 		this.wb.manage().timeouts().implicitlyWait(pageLoadTimeout,TimeUnit.MILLISECONDS);
 		
 		this.wb.get(url);
-		log.debug("Start browser to website" +url);
+		log.debug("Start browser to website: " +url);
 		
 		//new WebDriverWait(this.wb,pageLoadTimeout).until(webDriver->((JavascriptExecutor)this.wb).executeScript("return document.readyState").equals("complete"));
 				
